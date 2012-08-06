@@ -1,0 +1,29 @@
+<h1>Listing news</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Link</th>
+    <th>Title</th>
+    <th>Score</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @news.each do |news| %>
+  <tr>
+    <td><%= news.user_id %></td>
+    <td><%= news.link %></td>
+    <td><%= news.title %></td>
+    <td><%= news.score %></td>
+    <td><%= link_to 'Show', news %></td>
+    <td><%= link_to 'Edit', edit_news_path(news) %></td>
+    <td><%= link_to 'Destroy', news, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New News', new_news_path %>
