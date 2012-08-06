@@ -6,6 +6,7 @@
     <th>Link</th>
     <th>Title</th>
     <th>Score</th>
+    <th>User</th>
     <th></th>
     <th></th>
     <th></th>
@@ -17,6 +18,7 @@
     <td><%= news.link %></td>
     <td><%= news.title %></td>
     <td><%= news.score %></td>
+    <td><%= news.user.username %></td>
     <td><%= link_to 'Show', news %></td>
     <td><%= link_to 'Edit', edit_news_path(news) %></td>
     <td><%= link_to 'Destroy', news, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
